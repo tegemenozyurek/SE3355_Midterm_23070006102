@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HepsiLike</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Override Bootstrap's carousel transitions */
+        .carousel-item {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">HepsiLike</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="elektronikDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Elektronik
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="elektronikDropdown">
+                            <li><a class="dropdown-item" href="#">Bilgisayar/Tablet</a></li>
+                            <li><a class="dropdown-item" href="#">Yazıcılar & Projeksiyon</a></li>
+                            <li><a class="dropdown-item" href="#">Telefon & Telefon Aksesuarlari</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="modaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Moda
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="modaDropdown">
+                            <li><a class="dropdown-item" href="#">Kadın Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Erkek Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Çocuk Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Ayakkabı & Çanta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="evDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ev, Yasam, Kirtasiye, Ofis
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="evDropdown">
+                            <li><a class="dropdown-item" href="#">Mobilya</a></li>
+                            <li><a class="dropdown-item" href="#">Ev Tekstili</a></li>
+                            <li><a class="dropdown-item" href="#">Mutfak Gereçleri</a></li>
+                            <li><a class="dropdown-item" href="#">Ofis Malzemeleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="otoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Oto, Bahce, Yapi Market
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="otoDropdown">
+                            <li><a class="dropdown-item" href="#">Oto Aksesuar</a></li>
+                            <li><a class="dropdown-item" href="#">Bahçe Malzemeleri</a></li>
+                            <li><a class="dropdown-item" href="#">Yapı Malzemeleri</a></li>
+                            <li><a class="dropdown-item" href="#">El Aletleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="anneDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Anne, Bebek, Oyuncak
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="anneDropdown">
+                            <li><a class="dropdown-item" href="#">Bebek Bezi & Islak Mendil</a></li>
+                            <li><a class="dropdown-item" href="#">Bebek Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Hamile Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Oyuncaklar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="sporDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Spor, Outdoor
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="sporDropdown">
+                            <li><a class="dropdown-item" href="#">Fitness Ekipmanları</a></li>
+                            <li><a class="dropdown-item" href="#">Spor Giyim</a></li>
+                            <li><a class="dropdown-item" href="#">Kamp Malzemeleri</a></li>
+                            <li><a class="dropdown-item" href="#">Bisiklet & Scooter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="kozmetikDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kozmetik, Kisisel Bakim
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="kozmetikDropdown">
+                            <li><a class="dropdown-item" href="#">Parfüm</a></li>
+                            <li><a class="dropdown-item" href="#">Makyaj</a></li>
+                            <li><a class="dropdown-item" href="#">Cilt Bakımı</a></li>
+                            <li><a class="dropdown-item" href="#">Saç Bakımı</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="supermarketDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Supermarket, Petshop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="supermarketDropdown">
+                            <li><a class="dropdown-item" href="#">Temel Gıda</a></li>
+                            <li><a class="dropdown-item" href="#">İçecek</a></li>
+                            <li><a class="dropdown-item" href="#">Kedi Maması</a></li>
+                            <li><a class="dropdown-item" href="#">Köpek Maması</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="kitapDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kitap, Muzik, Film, Hobi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="kitapDropdown">
+                            <li><a class="dropdown-item" href="#">Kitaplar</a></li>
+                            <li><a class="dropdown-item" href="#">Müzik Aletleri</a></li>
+                            <li><a class="dropdown-item" href="#">Film & Dizi</a></li>
+                            <li><a class="dropdown-item" href="#">Hobi Malzemeleri</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-2">
+        <div class="boxes-container">
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Bu Fiyatlar Kaçmaz</div>
+                    <img src="https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg" alt="Elektronik" class="box-image">
+                </div>
+                <div class="box-title">Elektronik</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Fırsatlarla Dolu</div>
+                    <div class="promo-text">ÇEYİZ ALIŞVERİŞİ</div>
+                </div>
+                <div class="box-title">Alışverişe Başla</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">7/24 Altın Al</div>
+                    <img src="https://images.pexels.com/photos/366551/pexels-photo-366551.jpeg" alt="Kozmetik" class="box-image">
+                </div>
+                <div class="box-title">Hepsipay</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">3.000 TL Hepsipara</div>
+                    <div class="promo-text">%3.89'DAN BAŞLAYAN FAİZ</div>
+                </div>
+                <div class="box-title">Hepsipay</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">İndirimlerli Fiyatlar</div>
+                    <div class="promo-text">DÖRT DÖRTLÜK FIRSATLAR</div>
+                </div>
+                <div class="box-title">Alışverişe Başla</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Fırsatları Keşfet</div>
+                    <div class="promo-text">ALIŞVERİŞİNİZİN TOP LİSTESİ</div>
+                </div>
+                <div class="box-title">Sevilen Ürünler</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Aradığın Fırsatlar</div>
+                    <img src="https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg" alt="Kitap & Hobi" class="box-image">
+                </div>
+                <div class="box-title">Ev Elektroniği</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Fırsatları Keşfet</div>
+                    <div class="promo-text">HER EVE LAZIM ÜRÜNLER</div>
+                </div>
+                <div class="box-title">Fırsatları Kacırma</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">%70'e Varan İndirimler</div>
+                    <img src="https://images.pexels.com/photos/207891/pexels-photo-207891.jpeg" alt="Otomotiv" class="box-image">
+                </div>
+                <div class="box-title">Anne Çocuk Ürünleri</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Yeni Çağa Hoş Geldin</div>
+                    <img src="https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg" alt="Bahçe" class="box-image">
+                </div>
+                <div class="box-title">AI Destekli Ürünler</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Sakın Kaçırma</div>
+                    <div class="promo-text">HER EVE LAZIM ÜRÜNLER</div>
+                </div>
+                <div class="box-title">Küçük Ev Aletleri</div>
+            </div>
+            <div class="box-item">
+                <div class="orange-box">
+                    <div class="blue-line">Nisana Özel</div>
+                    <div class="promo-text">%70'E VARAN İNDİRİMLER</div>
+                </div>
+                <div class="box-title">Oyuncaklar</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sliders Section -->
+    <div class="sliders-section">
+        <div class="sliders-row">
+            <!-- Main Slider (60% width) -->
+            <div class="main-slider-container">
+                <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slider content will be dynamically loaded from API -->
+                        <div class="carousel-item active">
+                            <div class="slider-split-content">
+                                <div class="slider-image-container">
+                                    <img src="https://picsum.photos/id/10/800/350" alt="Loading...">
+                                </div>
+                                <div class="slider-orange-box">
+                                    <h3>Loading...</h3>
+                                    <p>Please wait while we fetch the latest offers.</p>
+                                </div>
+                            </div>
+                            <div class="slide-counter">1/10</div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Secondary Slider (30% width) -->
+            <div class="secondary-slider-container rounded">
+                <!-- Title -->
+                <div class="electronics-title">
+                    HER GÜN YENİLENEN<br>
+                    <span>ELEKTRONİK</span><br>
+                    <span>FIRSATLAR</span>
+                </div>
+                
+                <!-- Product Images on Left -->
+                <div style="position: absolute; top: 15px; left: 15px; width: 35%;">
+                    <img src="electros.png" class="img-fluid rounded mb-2" alt="Laptop" style="width: 150px; height: 150px;">
+                </div>
+                
+                <!-- Product Cards Slider -->
+                <div id="productDealsSlider" class="carousel" data-bs-ride="carousel" data-bs-interval="4000" style="margin-top: auto; flex-grow: 1; display: flex; flex-direction: column;">
+                    <div class="carousel-inner" style="flex-grow: 1;">
+                        <!-- Product Card 1 -->
+                        <div class="carousel-item active">
+                            <div class="product-deal-card">
+                                <div style="width: 50%; padding-right: 12px; display: flex; align-items: center; justify-content: flex-start; padding-left: 0;">
+                                    <img src="https://picsum.photos/id/26/220/220" class="img-fluid" alt="Mini Fırın" style="margin-left: -20px;">
+                                </div>
+                                <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; height: 100%; padding-right: 10px;">
+                                    <div style="display: flex; flex-direction: column; margin-bottom: 2px;">
+                                        <div class="text-primary" style="font-size: 0.9rem; margin-bottom: 3px;">Peşin fiyatına 9 taksit*</div>
+                                        <div style="font-size: 1.1rem; font-weight: 500; margin-bottom: 3px;">Mini Fırın Deluxe</div>
+                                        <div class="text-muted" style="font-size: 0.9rem; margin-bottom: 3px;">Stok: 50</div>
+                                        <div class="fw-bold" style="font-size: 1.2rem;">7.899,00 TL</div>
+                                    </div>
+                                    <button class="btn btn-light w-100 border py-1">Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 2 -->
+                        <div class="carousel-item">
+                            <div class="product-deal-card">
+                                <div style="width: 50%; padding-right: 12px; display: flex; align-items: center; justify-content: flex-start; padding-left: 0;">
+                                    <img src="https://picsum.photos/id/96/220/220" class="img-fluid" alt="Elektrikli Süpürge" style="margin-left: -20px;">
+                                </div>
+                                <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; height: 100%; padding-right: 10px;">
+                                    <div style="display: flex; flex-direction: column; margin-bottom: 2px;">
+                                        <div class="text-primary" style="font-size: 0.9rem; margin-bottom: 3px;">Peşin fiyatına 9 taksit*</div>
+                                        <div style="font-size: 1.1rem; font-weight: 500; margin-bottom: 3px;">Elektrikli Süpürge Pro</div>
+                                        <div class="text-muted" style="font-size: 0.9rem; margin-bottom: 3px;">Stok: 100</div>
+                                        <div class="fw-bold" style="font-size: 1.2rem;">22.999,00 TL</div>
+                                    </div>
+                                    <button class="btn btn-light w-100 border py-1">Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 3 -->
+                        <div class="carousel-item">
+                            <div class="product-deal-card">
+                                <div style="width: 50%; padding-right: 12px; display: flex; align-items: center; justify-content: flex-start; padding-left: 0;">
+                                    <img src="https://picsum.photos/id/180/220/220" class="img-fluid" alt="Çamaşır Makinesi" style="margin-left: -20px;">
+                                </div>
+                                <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; height: 100%; padding-right: 10px;">
+                                    <div style="display: flex; flex-direction: column; margin-bottom: 2px;">
+                                        <div class="text-primary" style="font-size: 0.9rem; margin-bottom: 3px;">Peşin fiyatına 9 taksit*</div>
+                                        <div style="font-size: 1.1rem; font-weight: 500; margin-bottom: 3px;">Çamaşır Makinesi XXL</div>
+                                        <div class="text-muted" style="font-size: 0.9rem; margin-bottom: 3px;">Stok: 75</div>
+                                        <div class="fw-bold" style="font-size: 1.2rem;">18.499,00 TL</div>
+                                    </div>
+                                    <button class="btn btn-light w-100 border py-1">Sepete Ekle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Navigation -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productDealsSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productDealsSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Personalized Recommendations Section -->
+    <div class="container-fluid px-2">
+        <div class="section-title-container">
+            <div class="section-title">Sana Özel Öneriler</div>
+        </div>
+        <div class="recommendation-container">
+            <div class="row">
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/26/300/300" class="product-image" alt="Product 1">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Akıllı Telefon Pro Max</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(126)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">24.999 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/96/300/300" class="product-image" alt="Product 2">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Bluetooth Kulaklık</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(345)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">1.299 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/119/300/300" class="product-image" alt="Product 3">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Akıllı Saat Pro</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(221)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">3.499 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/225/300/300" class="product-image" alt="Product 4">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Dijital Fotoğraf Makinesi</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="rating-count">(87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">8.750 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/180/300/300" class="product-image" alt="Product 5">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Elektrikli Kahve Makinesi</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(158)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">2.899 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://picsum.photos/id/11/300/300" class="product-image" alt="Product 6">
+                            <button class="favorite-btn" aria-label="Add to favorites">♡</button>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-name">Kablosuz Şarj Cihazı</h5>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(412)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">549 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Popup -->
+    <div id="productPopup" class="product-popup">
+        <div class="popup-content">
+            <button id="closePopup" class="close-popup">&times;</button>
+            <div class="popup-body">
+                <div class="popup-image-container">
+                    <img id="popupImage" src="" alt="Product Image">
+                </div>
+                <div class="popup-details">
+                    <h3 id="popupName" class="popup-name"></h3>
+                    <div class="popup-rating">
+                        <span id="popupStars" class="stars"></span>
+                        <span id="popupRatingCount" class="rating-count"></span>
+                    </div>
+                    <div class="popup-price">
+                        <span id="popupPrice" class="price"></span>
+                    </div>
+                    <div class="popup-actions">
+                        <button class="add-to-cart-btn">Sepete Ekle</button>
+                        <button id="popupFavoriteBtn" class="popup-favorite-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html> 
