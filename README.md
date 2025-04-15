@@ -4,6 +4,8 @@
 
 This project is a responsive **e-commerce website frontend** that mimics popular Turkish e-commerce platforms. It was developed as a midterm project for the **SE3355 Web Development** course.
 
+📺 **Project Demo Video:** [Watch on YouTube](https://www.youtube.com/watch?v=ZMScMBxwOm0)
+
 ---
 
 ## ✅ Requirements Met
@@ -87,10 +89,10 @@ This project is a responsive **e-commerce website frontend** that mimics popular
 
 ## ✨ Additional Features
 
-- Product **popup details** on click
-- **Favorite button** toggle functionality
-- Carousel controls with **smooth transitions**
-- **Dynamic product loading** with error handling
+- Product **popup details** on click  
+- **Favorite button** toggle functionality  
+- Carousel controls with **smooth transitions**  
+- **Dynamic product loading** with error handling  
 
 ---
 
@@ -105,6 +107,6 @@ This project is a responsive **e-commerce website frontend** that mimics popular
 
 ## 📌 Notes
 
-- Built using **Vanilla JavaScript** and **Bootstrap 5**.
-- No JavaScript frameworks were used as per course requirements.
+- Built using **Vanilla JavaScript** and **Bootstrap 5**.  
+- No JavaScript frameworks were used as per course requirements.  
 - Styling is handled with Bootstrap classes and custom CSS for specific components.
